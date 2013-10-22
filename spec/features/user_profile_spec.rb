@@ -4,7 +4,6 @@ feature "Profile page" do
 	scenario "viewing" do
 		user = FactoryGirl.create(:user)
 		
-		puts user
 		visit user_path(user)
 		
 		expect(page).to have_content(user.name)
