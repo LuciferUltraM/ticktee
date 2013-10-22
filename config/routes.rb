@@ -1,7 +1,5 @@
 Ticketee::Application.routes.draw do
-  get "users/new"
-  get "users/create"
-  get "users/show"
+	
 	root "projects#index"
 	
 	resources :users
@@ -10,5 +8,6 @@ Ticketee::Application.routes.draw do
 		resources :tickets
 	end
 	
-	
+	get "/signin", to: "sessions#new"
+	post "/signin", to: "sessions#create"
 end
