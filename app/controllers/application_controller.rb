@@ -26,4 +26,9 @@ class ApplicationController < ActionController::Base
   		@current_user ||= User.find(session[:user_id]) if session[:user_id]
   	end
   	helper_method :current_user
+  	
+  	def authorized?(permission, thing, &block)
+  		block.call if can?(permission.to_sym, thing) || current_user.try(:admin?)
+  	end
+  	helper_method :authorized?
 end

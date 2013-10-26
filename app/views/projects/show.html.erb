@@ -1,7 +1,9 @@
 <% title(@project.name, "Projects") %>
 <h2><%= @project.name %></h2>
 
-<%= link_to "New Ticket", new_project_ticket_path(@project) %>
+<% authorized?(:"create tickets", @project) do %>
+	<%= link_to "New Ticket", new_project_ticket_path(@project) %>
+<% end %>
 
 <ul id="tickets">
 	<% @project.tickets.each do |ticket| %>
