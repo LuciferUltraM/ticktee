@@ -38,6 +38,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use CanCan
 gem 'cancan', '1.6.9'
 
+# User CarriweWave for UploadFile
+gem 'carrierwave', '0.8.0'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
