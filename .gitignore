@@ -15,8 +15,4 @@
 /log/*.log
 /tmp
 
-<<<<<<< HEAD
-public/uploads
-=======
->>>>>>> 3fdcd22
 uploads
